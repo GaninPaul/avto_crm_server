@@ -1,0 +1,744 @@
+2019-07-18 14:17:14,895 celery.utils.dispatch.signal ERROR    Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7fc50564c588>> raised: SyntaxError('invalid syntax', ('/home/avtomall/www/AvtoMarketCRMserver/avto_crm_server/shop/admin.py', 58, 66, '        return ", ".join([f\'{i.product.name}-{i.product.bar_code}\' for i in obj.shopping_list])\n'))
+Traceback (most recent call last):
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/apps/registry.py", line 120, in populate
+    app_config.ready()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 661, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 767, in get_code
+  File "<frozen importlib._bootstrap_external>", line 727, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/avtomall/www/AvtoMarketCRMserver/avto_crm_server/shop/admin.py", line 58
+    return ", ".join([f'{i.product.name}-{i.product.bar_code}' for i in obj.shopping_list])
+                                                             ^
+SyntaxError: invalid syntax
+2019-07-18 14:18:15,993 celery.utils.dispatch.signal ERROR    Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f51fc775550>> raised: SyntaxError('invalid syntax', ('/home/avtomall/www/AvtoMarketCRMserver/avto_crm_server/shop/admin.py', 58, 66, '        return ", ".join([f\'{i.product.name}-{i.product.bar_code}\' for i in obj.shopping_list])\n'))
+Traceback (most recent call last):
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/apps/registry.py", line 120, in populate
+    app_config.ready()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/avtomall/www/AvtoMarketCRMserver/venv/lib/python3.5/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 661, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 767, in get_code
+  File "<frozen importlib._bootstrap_external>", line 727, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/avtomall/www/AvtoMarketCRMserver/avto_crm_server/shop/admin.py", line 58
+    return ", ".join([f'{i.product.name}-{i.product.bar_code}' for i in obj.shopping_list])
+                                                             ^
+SyntaxError: invalid syntax
+2019-07-18 14:30:47,930 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:31:07,415 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:32:47,997 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-07-18 14:33:45,768 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-07-18 14:34:05,189 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-07-18 14:35:02,433 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:41:16,081 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:41:21,184 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:41:27,332 django.request WARNING  Not Found: /api/shop/open
+2019-07-18 14:41:34,990 django.request WARNING  Not Found: /api/shop/casher/open
+2019-07-18 14:43:42,047 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-07-18 14:44:54,393 django.request WARNING  Precondition Failed: /api/shop/sales/
+2019-07-18 14:45:19,469 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-07-18 14:55:35,476 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:57:17,146 django.request WARNING  Not Found: /favicon.ico
+2019-07-18 14:57:31,850 django.request WARNING  Not Found: /
+2019-07-18 14:57:32,019 django.request WARNING  Not Found: /favicon.ico
+2019-07-21 09:15:17,311 django.request WARNING  Not Found: /favicon.ico
+2019-07-21 09:15:35,884 django.request WARNING  Not Found: /
+2019-07-21 09:15:36,333 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 14:11:17,242 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 14:13:53,880 django.request WARNING  Not Found: /
+2019-07-30 14:13:54,588 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 14:14:47,867 django.request WARNING  Not Found: /
+2019-07-30 14:15:14,658 django.request WARNING  Bad Request: /api/jwt/create
+2019-07-30 14:15:53,352 django.request WARNING  Bad Request: /api/jwt/create
+2019-07-30 14:41:01,538 django.request WARNING  Not Found: /
+2019-07-30 14:41:04,419 django.request WARNING  Not Found: /
+2019-07-30 14:41:04,659 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 14:41:07,481 django.request WARNING  Not Found: /
+2019-07-30 14:41:08,344 django.request WARNING  Not Found: /
+2019-07-30 14:41:25,499 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-07-30 14:42:13,672 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-07-30 14:42:17,561 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-07-30 14:42:55,474 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-07-30 14:54:57,181 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 14:54:59,451 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-07-30 15:16:53,357 django.request WARNING  Not Found: /
+2019-07-30 15:16:53,716 django.request WARNING  Not Found: /favicon.ico
+2019-07-30 15:18:11,698 django.request WARNING  Not Found: /
+2019-07-30 15:18:12,910 django.request WARNING  Not Found: /
+2019-07-30 15:31:47,405 django.request WARNING  Not Found: /
+2019-07-30 15:32:25,872 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-08-02 19:00:46,754 django.request WARNING  Not Found: /favicon.ico
+2019-08-02 19:00:47,352 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-02 19:00:48,657 django.request WARNING  Not Found: /favicon.ico
+2019-08-02 19:01:19,680 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-02 20:58:28,730 django.request WARNING  Not Found: /favicon.ico
+2019-08-02 20:58:35,555 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-02 20:58:41,760 django.request WARNING  Not Found: /favicon.ico
+2019-08-02 20:58:57,452 django.request WARNING  Not Found: /
+2019-08-02 20:58:59,123 django.request WARNING  Not Found: /
+2019-08-02 20:58:59,850 django.request WARNING  Not Found: /
+2019-08-02 20:59:15,954 django.request WARNING  Not Found: /
+2019-08-04 07:05:09,978 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-04 07:05:11,024 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 07:05:12,947 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-04 07:05:16,901 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 07:05:17,286 django.request WARNING  Not Found: /
+2019-08-04 07:07:05,654 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 07:20:06,911 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:20:06,967 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:20:07,238 django.request WARNING  Bad Request: /api/jwt/create
+2019-08-04 07:20:13,815 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:20:13,874 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:20:14,160 django.request WARNING  Bad Request: /api/jwt/create
+2019-08-04 07:20:26,192 django.request WARNING  Not Found: /
+2019-08-04 07:20:32,411 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:20:32,462 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:20:32,750 django.request WARNING  Bad Request: /api/jwt/create
+2019-08-04 07:20:33,901 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:20:33,948 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:20:34,220 django.request WARNING  Bad Request: /api/jwt/create
+2019-08-04 07:20:52,718 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:20:52,898 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:20:53,242 django.request WARNING  Bad Request: /api/jwt/create
+2019-08-04 07:21:30,261 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:21:30,375 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-04 07:27:22,281 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:42:14,418 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:49:48,538 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:56:39,343 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 07:57:14,314 django.request WARNING  Unauthorized: /api/shop/cashier/check
+2019-08-04 09:01:44,129 django.request ERROR    Internal Server Error: /api/shop/sales/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 412, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2019-08-04 09:05:38,272 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:14:05,315 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:22:50,544 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:28:49,068 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:34:46,261 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:41:27,972 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 09:52:28,614 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:02:14,726 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:03:34,087 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:03:45,436 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:21:32,798 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:34:51,277 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:35:08,877 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:38:31,282 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:38:52,565 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:40:59,784 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:41:06,060 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:41:36,628 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:45:09,111 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:45:29,694 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:05,459 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 10:46:11,557 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:12,808 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:13,421 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:13,751 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:15,330 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:46:15,489 django.request WARNING  Not Found: /api/shop/sales/
+2019-08-04 10:48:11,355 django.request WARNING  Not Found: /api/shop/sales/7777777/
+2019-08-04 12:06:09,922 django.request WARNING  Not Found: /
+2019-08-04 12:06:11,634 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 12:06:11,986 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 12:06:15,167 django.request WARNING  Not Found: /
+2019-08-04 12:08:24,141 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-08-04 12:11:34,137 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-04 12:11:39,937 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 12:18:05,962 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 12:18:19,658 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 12:20:00,540 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-04 12:20:07,819 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 12:53:03,713 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-04 12:53:09,602 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-04 12:55:19,583 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 12:55:24,461 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 13:07:57,063 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 13:08:17,972 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 13:18:38,052 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 13:18:59,658 django.request WARNING  Not Found: /favicon.ico
+2019-08-04 13:19:34,776 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-08-06 18:54:31,006 django.request WARNING  Not Found: /
+2019-08-06 18:54:31,529 django.request WARNING  Not Found: /favicon.ico
+2019-08-06 18:54:32,674 django.request WARNING  Not Found: /
+2019-08-06 19:00:09,765 django.request WARNING  Not Found: /favicon.ico
+2019-08-06 19:00:21,880 django.request WARNING  Not Found: /favicon.ico
+2019-08-06 19:30:04,502 django.request WARNING  Not Found: /favicon.ico
+2019-08-06 19:30:16,292 django.request WARNING  Not Found: /favicon.ico
+2019-08-06 19:33:40,452 django.request ERROR    Internal Server Error: /api/shop/products/5/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 93, in destroy
+    self.perform_destroy(instance)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 97, in perform_destroy
+    instance.delete()
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/base.py", line 879, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 221, in collect
+    field.remote_field.on_delete(self, field, sub_objs, self.using)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 27, in PROTECT
+    sub_objs
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Product' because they are referenced through a protected foreign key: 'ShoppingListItem.product'", <QuerySet [<ShoppingListItem: ShoppingListItem object (23)>, <ShoppingListItem: ShoppingListItem object (24)>]>)
+2019-08-06 19:34:53,974 django.request WARNING  Not Found: /api/shop/products/15/
+2019-08-06 19:35:02,563 django.request WARNING  Not Found: /api/shop/products/10/
+2019-08-06 19:35:14,891 django.request WARNING  Not Found: /api/shop/products/9/
+2019-08-06 19:35:20,753 django.request ERROR    Internal Server Error: /api/shop/products/1/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 93, in destroy
+    self.perform_destroy(instance)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 97, in perform_destroy
+    instance.delete()
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/base.py", line 879, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 221, in collect
+    field.remote_field.on_delete(self, field, sub_objs, self.using)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 27, in PROTECT
+    sub_objs
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Product' because they are referenced through a protected foreign key: 'RetailPriceList.product'", <QuerySet [<RetailPriceList: Лампочка>]>)
+2019-08-06 19:36:03,215 django.request ERROR    Internal Server Error: /api/shop/products/3/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 93, in destroy
+    self.perform_destroy(instance)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 97, in perform_destroy
+    instance.delete()
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/base.py", line 879, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 221, in collect
+    field.remote_field.on_delete(self, field, sub_objs, self.using)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 27, in PROTECT
+    sub_objs
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Product' because they are referenced through a protected foreign key: 'ShoppingListItem.product'", <QuerySet [<ShoppingListItem: ShoppingListItem object (5)>, <ShoppingListItem: ShoppingListItem object (6)>, <ShoppingListItem: ShoppingListItem object (18)>]>)
+2019-08-06 19:37:16,135 django.request ERROR    Internal Server Error: /api/shop/products/8/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 93, in destroy
+    self.perform_destroy(instance)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 97, in perform_destroy
+    instance.delete()
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/base.py", line 879, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 221, in collect
+    field.remote_field.on_delete(self, field, sub_objs, self.using)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 27, in PROTECT
+    sub_objs
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Product' because they are referenced through a protected foreign key: 'RetailPriceList.product'", <QuerySet [<RetailPriceList: string>]>)
+2019-08-06 19:37:22,203 django.request ERROR    Internal Server Error: /api/shop/products/9/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 93, in destroy
+    self.perform_destroy(instance)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/mixins.py", line 97, in perform_destroy
+    instance.delete()
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/base.py", line 879, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 221, in collect
+    field.remote_field.on_delete(self, field, sub_objs, self.using)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/db/models/deletion.py", line 27, in PROTECT
+    sub_objs
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Product' because they are referenced through a protected foreign key: 'RetailPriceList.product'", <QuerySet [<RetailPriceList: string>]>)
+2019-08-09 10:44:32,372 django.request WARNING  Not Found: /favicon.ico
+2019-08-09 10:44:41,480 django.request WARNING  Not Found: /favicon.ico
+2019-08-09 10:45:23,680 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-09 10:45:23,715 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-09 11:02:31,476 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-09 11:02:37,543 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-09 11:14:10,526 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-09 11:15:27,733 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-09 13:00:50,488 django.request WARNING  Not Found: /favicon.ico
+2019-08-10 06:55:51,858 django.request WARNING  Not Found: /favicon.ico
+2019-08-11 08:17:10,908 django.request WARNING  Not Found: /favicon.ico
+2019-08-12 08:49:48,981 django.request WARNING  Not Found: /favicon.ico
+2019-08-13 03:48:31,847 django.request WARNING  Not Found: /favicon.ico
+2019-08-13 11:36:58,398 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-13 11:36:58,518 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-13 11:39:48,645 django.request WARNING  Not Found: /favicon.ico
+2019-08-13 11:58:07,415 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-13 12:03:51,186 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-13 12:04:00,782 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-13 12:12:21,912 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-13 12:12:29,945 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-14 03:15:04,599 django.request WARNING  Not Found: /favicon.ico
+2019-08-14 08:39:08,568 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-14 08:39:19,583 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-14 10:15:16,907 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-14 10:15:35,568 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-14 10:15:36,113 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-14 10:16:02,905 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-14 10:16:10,594 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-14 12:26:23,763 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-14 12:26:30,406 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-14 12:26:30,450 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-15 03:12:29,080 django.request WARNING  Not Found: /favicon.ico
+2019-08-15 05:54:37,929 django.request WARNING  Not Found: /favicon.ico
+2019-08-15 07:53:50,058 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-15 08:30:15,564 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-15 11:47:12,847 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-15 11:47:19,742 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-16 08:03:08,136 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-16 08:03:08,215 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-16 08:04:57,218 django.request WARNING  Not Found: /favicon.ico
+2019-08-16 08:52:07,555 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-16 08:52:13,490 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-16 09:28:22,901 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-16 09:28:33,923 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-16 11:48:27,800 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-16 11:48:32,961 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 03:19:00,616 django.request WARNING  Not Found: /favicon.ico
+2019-08-27 06:44:39,088 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 06:44:39,128 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-27 08:13:25,505 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:13:38,703 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:13:39,112 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:13:39,304 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:13:54,292 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:15:51,606 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:15:58,424 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 08:54:14,684 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 08:54:20,742 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 09:10:20,229 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 09:10:24,647 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 09:56:32,598 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 09:56:37,614 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 10:03:58,881 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-27 10:04:04,154 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-27 13:21:20,088 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-27 13:21:25,098 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-28 03:25:37,926 django.request WARNING  Not Found: /favicon.ico
+2019-08-28 08:01:34,251 django.request WARNING  Not Found: /favicon.ico
+2019-08-28 08:01:55,760 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-28 08:02:00,261 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-28 08:02:00,305 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-28 08:36:01,245 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-28 08:36:05,623 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-28 13:06:09,330 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-28 13:06:13,338 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-29 03:01:02,510 django.request WARNING  Not Found: /favicon.ico
+2019-08-29 03:02:40,323 django.request WARNING  Not Found: /favicon.ico
+2019-08-30 03:04:40,152 django.request WARNING  Not Found: /favicon.ico
+2019-08-30 08:09:37,209 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-08-30 08:09:45,810 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-30 08:09:45,851 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-08-30 08:44:01,898 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-30 08:44:06,919 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-30 10:59:24,000 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-08-30 10:59:28,545 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-30 13:28:10,738 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-08-30 13:28:14,720 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-08-31 04:19:38,121 django.request WARNING  Not Found: /favicon.ico
+2019-09-02 03:38:07,301 django.request WARNING  Not Found: /favicon.ico
+2019-09-02 05:37:40,426 django.request WARNING  Not Found: /favicon.ico
+2019-09-02 05:42:21,842 django.request WARNING  Not Found: /favicon.ico
+2019-09-02 07:04:57,673 django.request WARNING  Not Found: /favicon.ico
+2019-09-02 10:13:38,425 django.request WARNING  Not Found: /favicon.ico
+2019-09-03 03:02:49,735 django.request WARNING  Not Found: /favicon.ico
+2019-09-03 07:19:45,821 django.request WARNING  Not Found: /favicon.ico
+2019-09-03 07:54:00,197 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-03 07:54:05,566 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-03 07:54:05,604 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-09-03 08:07:04,412 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-03 08:07:08,298 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-03 08:12:15,800 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-03 08:12:21,026 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-03 09:25:45,581 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-03 09:25:56,444 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-03 11:39:31,042 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-03 11:39:35,611 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-03 12:01:01,613 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-03 12:01:05,553 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-04 04:04:09,158 django.request WARNING  Not Found: /favicon.ico
+2019-09-04 07:14:40,713 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-04 07:14:45,014 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-04 07:20:47,428 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-04 11:26:14,142 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-04 11:26:21,347 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-04 11:26:21,387 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-09-04 13:47:45,131 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-04 13:47:49,450 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-05 02:56:09,167 django.request WARNING  Not Found: /favicon.ico
+2019-09-05 07:43:56,314 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-05 07:44:01,840 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-05 07:54:08,531 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-05 07:54:18,085 django.request ERROR    Internal Server Error: /api/shop/sales/
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 412, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2019-09-05 10:20:25,547 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-05 10:20:29,405 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-05 13:25:35,158 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-05 13:25:39,252 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-05 13:25:39,301 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-09-06 03:52:33,362 django.request WARNING  Not Found: /favicon.ico
+2019-09-06 05:53:49,125 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-06 06:13:08,884 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-06 06:13:20,559 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-06 06:13:25,125 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-06 10:57:38,473 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-06 10:57:42,259 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-06 12:27:17,483 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-06 12:27:21,595 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-07 03:55:47,296 django.request WARNING  Not Found: /favicon.ico
+2019-09-07 10:25:09,904 django.request WARNING  Not Found: /favicon.ico
+2019-09-09 04:37:22,224 django.request WARNING  Not Found: /favicon.ico
+2019-09-09 08:13:11,345 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:15,613 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:17,750 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:20,260 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:21,463 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:22,774 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:13:41,009 django.request WARNING  Not Found: /favicon.ico
+2019-09-09 08:14:08,750 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:16:48,484 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-09 08:19:06,553 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-10 03:13:27,450 django.request WARNING  Not Found: /favicon.ico
+2019-09-11 04:42:10,434 django.request WARNING  Not Found: /favicon.ico
+2019-09-12 07:08:57,540 django.request WARNING  Not Found: /favicon.ico
+2019-09-12 11:46:51,068 django.request WARNING  Not Found: /favicon.ico
+2019-09-13 04:03:21,832 django.request WARNING  Not Found: /favicon.ico
+2019-09-13 12:23:20,688 django.request WARNING  Not Found: /favicon.ico
+2019-09-14 04:21:01,944 django.request WARNING  Not Found: /favicon.ico
+2019-09-14 04:21:15,230 django.request WARNING  Not Found: /favicon.ico
+2019-09-14 04:21:21,498 django.request WARNING  Not Found: /favicon.ico
+2019-09-16 03:34:33,896 django.request WARNING  Not Found: /favicon.ico
+2019-09-18 10:12:12,781 django.request WARNING  Not Found: /favicon.ico
+2019-09-18 10:12:18,049 django.request WARNING  Not Found: /favicon.ico
+2019-09-18 10:12:20,273 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-18 10:12:25,576 django.request WARNING  Not Found: //api/jwt/create
+2019-09-18 10:14:16,829 django.request WARNING  Not Found: /
+2019-09-18 10:14:17,212 django.request WARNING  Not Found: /favicon.ico
+2019-09-18 10:14:25,492 django.request WARNING  Bad Request: /api/jwt/create
+2019-09-18 10:23:15,778 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-18 11:17:06,886 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-18 11:24:58,155 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:04,036 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:05,012 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:05,317 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:05,595 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:05,824 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:06,084 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:06,337 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:07,421 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:07,469 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:07,803 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:07,918 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:26,548 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:32,778 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:34,251 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:34,840 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:35,223 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:35,426 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:35,631 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:35,780 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:35,963 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-18 11:25:53,857 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-18 11:26:15,464 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:16,621 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:19,240 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:19,944 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:20,114 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:20,257 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 11:26:20,674 django.request WARNING  Not Found: /api/shop/sales/
+2019-09-18 12:19:08,086 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-18 12:19:26,323 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-18 12:19:32,591 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-18 12:20:05,621 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-09-19 10:16:17,158 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-19 10:16:20,509 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:16:36,123 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:16:55,740 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:17:01,067 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:19:50,153 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:23:40,071 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 10:24:19,147 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-19 10:24:27,261 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-19 10:24:37,041 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-19 10:24:54,104 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-19 10:25:04,134 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-19 10:29:12,330 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-19 10:29:12,362 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-09-19 11:34:05,353 django.request WARNING  Unauthorized: /api/shop/sales/
+2019-09-19 12:34:35,503 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-21 05:48:17,347 django.request WARNING  Not Found: /favicon.ico
+2019-09-21 05:48:33,650 django.request WARNING  Not Found: /favicon.ico
+2019-09-21 10:57:22,155 django.request WARNING  Not Found: /favicon.ico
+2019-09-21 10:57:24,118 django.request WARNING  Not Found: /favicon.ico
+2019-09-25 04:21:28,759 django.request WARNING  Not Found: /favicon.ico
+2019-09-25 04:21:34,018 django.request WARNING  Not Found: /favicon.ico
+2019-09-26 05:08:35,220 django.request WARNING  Not Found: /favicon.ico
+2019-09-26 05:08:41,420 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:33:55,885 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-27 11:33:55,998 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-09-27 11:43:35,697 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:43:41,069 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.css
+2019-09-27 11:43:41,146 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.js
+2019-09-27 11:43:46,884 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:44:35,226 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.css
+2019-09-27 11:44:35,256 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.css
+2019-09-27 11:44:35,263 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.js
+2019-09-27 11:44:35,332 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.js
+2019-09-27 11:44:35,335 django.request WARNING  Not Found: /static/rest_framework_swagger/logo_small.png
+2019-09-27 11:44:50,757 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.js
+2019-09-27 11:44:50,780 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.js
+2019-09-27 11:45:10,203 django.request WARNING  Not Found: //
+2019-09-27 11:45:14,115 django.request WARNING  Not Found: /
+2019-09-27 11:45:20,492 django.request WARNING  Not Found: /static/admin/css/responsive.css
+2019-09-27 11:45:20,525 django.request WARNING  Not Found: /static/admin/css/base.css
+2019-09-27 11:45:27,414 django.request WARNING  Not Found: /static/admin/css/base.css
+2019-09-27 11:45:27,417 django.request WARNING  Not Found: /static/admin/css/dashboard.css
+2019-09-27 11:45:27,446 django.request WARNING  Not Found: /static/admin/css/responsive.css
+2019-09-27 11:45:27,615 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:45:29,297 django.request WARNING  Not Found: /static/admin/css/base.css
+2019-09-27 11:45:29,305 django.request WARNING  Not Found: /static/admin/css/dashboard.css
+2019-09-27 11:45:29,309 django.request WARNING  Not Found: /static/admin/css/responsive.css
+2019-09-27 11:45:29,487 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:45:57,193 django.request WARNING  Not Found: /static/admin/css/base.css
+2019-09-27 11:45:57,207 django.request WARNING  Not Found: /static/admin/css/dashboard.css
+2019-09-27 11:45:57,214 django.request WARNING  Not Found: /static/admin/css/responsive.css
+2019-09-27 11:45:59,502 django.request WARNING  Not Found: /static/admin/css/base.css
+2019-09-27 11:45:59,518 django.request WARNING  Not Found: /static/admin/css/dashboard.css
+2019-09-27 11:45:59,568 django.request WARNING  Not Found: /static/admin/css/responsive.css
+2019-09-27 11:45:59,705 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:46:06,107 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.css
+2019-09-27 11:46:06,116 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.css
+2019-09-27 11:46:06,232 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.js
+2019-09-27 11:46:06,236 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.js
+2019-09-27 11:46:06,239 django.request WARNING  Not Found: /static/rest_framework_swagger/logo_small.png
+2019-09-27 11:46:11,494 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-09-27 11:47:09,348 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/vendors.bundle.js
+2019-09-27 11:47:09,373 django.request WARNING  Not Found: /static/rest_framework_swagger/bundles/app.bundle.js
+2019-09-27 11:55:37,596 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:55:53,791 django.request WARNING  Not Found: /favicon.ico
+2019-09-27 11:57:13,766 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-27 11:57:20,428 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-27 11:57:29,217 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-27 11:58:29,920 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-09-27 11:58:44,564 django.request WARNING  Unauthorized: /api/shop/cashier/close
+2019-09-27 11:58:55,747 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-06 12:48:14,716 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 12:49:14,445 django.request WARNING  Not Found: /
+2019-10-06 12:49:14,815 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 14:36:10,169 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-06 14:36:18,633 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 16:26:49,952 django.request WARNING  Not Found: /
+2019-10-06 16:28:36,665 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-10-06 16:40:50,994 django.request WARNING  Not Found: /
+2019-10-06 16:40:55,912 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 16:40:57,430 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 16:42:00,408 django.request WARNING  Not Found: /
+2019-10-06 16:42:02,141 django.request WARNING  Not Found: /
+2019-10-06 16:42:34,326 django.request WARNING  Unauthorized: /api/shop/cashier/open
+2019-10-06 16:44:00,519 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-10-06 16:45:37,514 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-10-06 17:59:06,762 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-06 18:01:33,281 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 18:01:35,775 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 18:01:47,385 django.request ERROR    Internal Server Error: /api/shop/cashier/open
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/cache/__init__.py", line 50, in _create_cache
+    backend_cls = import_string(backend)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'django_redis'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/rest_framework/decorators.py", line 54, in handler
+    return func(*args, **kwargs)
+  File "/home/avtomall/www/AvtoMarketCRMserver/avto_crm_server/shop/views/cashier_views.py", line 11, in open_cashier_view
+    if not cache.get('CASHIER_IS_OPEN', False):
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/cache/__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/cache/__init__.py", line 79, in __getitem__
+    cache = _create_cache(alias)
+  File "/home/avtomall/.local/lib/python3.5/site-packages/django/core/cache/__init__.py", line 53, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find backend 'django_redis.cache.RedisCache': No module named 'django_redis'
+2019-10-06 18:06:06,140 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-10-06 18:08:25,371 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 18:08:25,835 django.request WARNING  Not Found: /favicon.ico
+2019-10-06 18:08:31,417 django.request WARNING  Precondition Failed: /api/shop/cashier/open
+2019-10-06 18:08:57,330 django.request WARNING  Not Found: /api/shop/cashier/clos
+2019-10-06 18:09:14,341 django.request WARNING  Precondition Failed: /api/shop/cashier/close
+2019-10-06 18:50:55,679 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-06 19:04:39,009 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-06 19:46:34,304 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-11 03:38:21,221 django.request WARNING  Not Found: /favicon.ico
+2019-10-11 07:00:32,898 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-11 07:00:32,950 django.request WARNING  Unauthorized: /api/jwt/refresh
+2019-10-11 07:12:11,546 django.request WARNING  Not Found: /favicon.ico
+2019-10-11 12:25:30,498 django.request WARNING  Not Found: /favicon.ico
+2019-10-11 12:31:15,052 django.request WARNING  Unauthorized: /api/jwt/verify
+2019-10-11 12:31:29,140 django.request WARNING  Not Found: /favicon.ico
+2019-10-11 12:31:45,563 django.request WARNING  Not Found: /favicon.ico
+2019-10-11 12:47:36,052 django.request WARNING  Not Found: /favicon.ico
