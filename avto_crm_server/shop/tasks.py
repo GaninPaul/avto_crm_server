@@ -3,7 +3,7 @@ import hashlib
 import json
 import requests
 from .models import Product
-from avto_crm_server.celery import app
+from avto_crm_server.avto_crm_server.celery import app
 
 
 URL = "http://127.0.0.1:16732/requests"
