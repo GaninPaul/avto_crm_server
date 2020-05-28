@@ -1,0 +1,5 @@
+DB_NAME=automarket
+DB_USER=django
+DB_PASS=170798
+DB_SERVICE=postgres
+DB_PORT=5432

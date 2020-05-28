@@ -1,0 +1,134 @@
+2020-02-29 16:19:38,795 celery.utils.dispatch.signal ERROR    Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f4c03ceb610>> raised: ModuleNotFoundError("No module named 'django_redis'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/usr/local/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 89, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django_redis'
+2020-02-29 16:19:38,798 celery.utils.dispatch.signal ERROR    Signal handler <promise@0x7f4c03cecca0 --> <bound method Celery._autodiscover_tasks of <Celery avto_crm_server at 0x7f4c03ceb4f0>>> raised: AppRegistryNotReady("Apps aren't loaded yet.")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 170, in __call__
+    return self.throw()
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 167, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 680, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 689, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 691, in <listcomp>
+    for pkg in fixup.autodiscover_tasks()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 94, in autodiscover_tasks
+    return [config.name for config in apps.get_app_configs()]
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 141, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 132, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+2020-02-29 16:26:14,881 celery.utils.dispatch.signal ERROR    Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f946423b610>> raised: ModuleNotFoundError("No module named 'django_redis'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/usr/local/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 89, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django_redis'
+2020-02-29 16:26:14,896 celery.utils.dispatch.signal ERROR    Signal handler <promise@0x7f946423cca0 --> <bound method Celery._autodiscover_tasks of <Celery avto_crm_server at 0x7f946423b4f0>>> raised: AppRegistryNotReady("Apps aren't loaded yet.")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 170, in __call__
+    return self.throw()
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 167, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 680, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 689, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 691, in <listcomp>
+    for pkg in fixup.autodiscover_tasks()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 94, in autodiscover_tasks
+    return [config.name for config in apps.get_app_configs()]
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 141, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 132, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+2020-02-29 16:31:39,165 celery.utils.dispatch.signal ERROR    Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x7f7f5a36f610>> raised: ModuleNotFoundError("No module named 'django_redis'")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 84, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 122, in validate_models
+    self.django_setup()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 118, in django_setup
+    django.setup()
+  File "/usr/local/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 89, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django_redis'
+2020-02-29 16:31:39,176 celery.utils.dispatch.signal ERROR    Signal handler <promise@0x7f7f5a370ca0 --> <bound method Celery._autodiscover_tasks of <Celery avto_crm_server at 0x7f7f5a36f4f0>>> raised: AppRegistryNotReady("Apps aren't loaded yet.")
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/celery/utils/dispatch/signal.py", line 288, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 170, in __call__
+    return self.throw()
+  File "/usr/local/lib/python3.8/site-packages/vine/promises.py", line 167, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 680, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_fixups(related_name)
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 689, in _autodiscover_tasks_from_fixups
+    return self._autodiscover_tasks_from_names([
+  File "/usr/local/lib/python3.8/site-packages/celery/app/base.py", line 691, in <listcomp>
+    for pkg in fixup.autodiscover_tasks()
+  File "/usr/local/lib/python3.8/site-packages/celery/fixups/django.py", line 94, in autodiscover_tasks
+    return [config.name for config in apps.get_app_configs()]
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 141, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.8/site-packages/django/apps/registry.py", line 132, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+2020-02-29 16:51:10,148 django.request WARNING  Not Found: /
+2020-02-29 16:51:11,293 django.request WARNING  Not Found: /favicon.ico
+2020-02-29 16:51:19,467 django.request WARNING  Not Found: /
+2020-02-29 16:51:20,552 django.request WARNING  Not Found: /favicon.ico
+2020-02-29 17:09:09,453 django.request WARNING  Not Found: /

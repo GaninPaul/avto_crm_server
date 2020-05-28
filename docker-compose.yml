@@ -8,20 +8,21 @@ services:
   redis:
     image: "redis:alpine"
   web:
-    build: avto_crm_server
-    command: bash -c "python /code/manage.py runserver 0.0.0.0:8000"
+    build: src
+      # dockerfile: Dockerfile
+    command: bash -c "python ./manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/code
+      - .:/src
     ports:
       - "8000:8000"
     depends_on:
       - db
       - redis
   celery:
-    build: avto_crm_server
+    build: src
     command: celery -A avto_crm_server worker -l info
     volumes:
-      - .:/code
+      - .:/src
     depends_on:
       - db
       - redis
